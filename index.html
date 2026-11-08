@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Japanese Phrases for Travelers</title>
+<meta name="description" content="Common Japanese phrases for tourists, with pronunciation written for American English speakers.">
+<style>
+  :root {
+    --bg: #faf8f5;
+    --card: #ffffff;
+    --text: #1f1f1f;
+    --muted: #6b6b6b;
+    --accent: #c8372d;
+    --accent-soft: #fbeae8;
+    --border: #e6e1da;
+    --shadow: 0 1px 2px rgba(0,0,0,.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151515;
+      --card: #1f1f1f;
+      --text: #f0ede8;
+      --muted: #a09b94;
+      --accent: #ff7a6e;
+      --accent-soft: #2e1f1d;
+      --border: #333;
+      --shadow: none;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 130px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    line-height: 1.5;
+  }
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 16px 10px;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  h1 { margin: 0 0 8px; font-size: 1.25rem; letter-spacing: -.01em; }
+  h1 span { color: var(--accent); }
+  #search {
+    width: 100%; padding: 10px 12px; font-size: 1rem;
+    border: 1px solid var(--border); border-radius: 10px;
+    background: var(--card); color: var(--text);
+  }
+  #search:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  nav { display: flex; gap: 6px; overflow-x: auto; padding-top: 8px; scrollbar-width: none; }
+  nav::-webkit-scrollbar { display: none; }
+  nav a {
+    flex: none; font-size: .8rem; text-decoration: none; color: var(--text);
+    border: 1px solid var(--border); background: var(--card);
+    padding: 4px 10px; border-radius: 999px;
+  }
+  nav a:hover { border-color: var(--accent); color: var(--accent); }
+  main { max-width: 860px; margin: 0 auto; padding: 16px; }
+  details.guide {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 12px 16px; margin-bottom: 20px; box-shadow: var(--shadow);
+  }
+  details.guide summary { cursor: pointer; font-weight: 600; }
+  details.guide ul { margin: 10px 0 2px; padding-left: 20px; }
+  details.guide li { margin: 6px 0; }
+  code.say { background: var(--accent-soft); color: var(--accent); padding: 1px 6px; border-radius: 5px; font-size: .92em; }
+  section { margin-bottom: 28px; }
+  section h2 {
+    font-size: 1.05rem; margin: 0 0 4px; padding-bottom: 6px;
+    border-bottom: 2px solid var(--accent); display: inline-block;
+  }
+  .intro { color: var(--muted); font-size: .9rem; margin: 6px 0 12px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 12px 14px; box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .en { font-weight: 600; font-size: .95rem; }
+  .jp { font-size: 1.35rem; line-height: 1.35; margin-top: 2px; }
+  .romaji { color: var(--muted); font-size: .85rem; }
+  .sound { margin-top: 4px; font-size: .95rem; }
+  .sound b { color: var(--accent); font-weight: 600; }
+  .note { margin-top: 6px; font-size: .82rem; color: var(--muted); border-left: 3px solid var(--border); padding-left: 8px; }
+  .actions { display: flex; gap: 6px; margin-top: 8px; }
+  button {
+    font: inherit; font-size: .8rem; cursor: pointer;
+    border: 1px solid var(--border); background: var(--bg); color: var(--text);
+    padding: 4px 10px; border-radius: 8px;
+  }
+  button:hover { border-color: var(--accent); color: var(--accent); }
+  .tips { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 4px 16px 4px 34px; }
+  .tips li { margin: 10px 0; }
+  .emergency {
+    background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 10px;
+    padding: 8px 12px; margin: 8px 0 12px; font-size: .92rem;
+  }
+  #empty { display: none; text-align: center; color: var(--muted); padding: 40px 0; }
+  footer { max-width: 860px; margin: 0 auto; padding: 8px 16px 40px; color: var(--muted); font-size: .8rem; }
+  dialog {
+    border: none; border-radius: 16px; padding: 28px 24px; width: min(92vw, 560px);
+    background: var(--card); color: var(--text); text-align: center;
+  }
+  dialog::backdrop { background: rgba(0,0,0,.6); }
+  dialog .big { font-size: clamp(1.8rem, 8vw, 2.6rem); line-height: 1.35; margin: 8px 0; }
+  dialog .small { color: var(--muted); }
+  dialog button { margin-top: 18px; padding: 8px 18px; font-size: .95rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Japanese for Travelers <span>日本語</span></h1>
+    <input id="search" type="search" placeholder="Search English, Japanese, or romaji (try &quot;train&quot;)" autocomplete="off">
+    <nav id="nav" aria-label="Sections"></nav>
+  </div>
+</header>
+
+<main>
+  <details class="guide" open>
+    <summary>How to read the pronunciations</summary>
+    <ul>
+      <li>The <code class="say">red respelling</code> under each phrase is written for American English speakers. Read it out loud, one syllable at a time, at an even pace. Japanese has no heavy stress like English does.</li>
+      <li><b>Vowels are short and pure:</b> ah as in "father," ee as in "see," oo as in "food," eh as in "bed," oh as in "go." <code class="say">ah-ee</code> is two quick beats, not "eye."</li>
+      <li><b>Silent-ish endings:</b> in <i>desu</i> and <i>-masu</i> the final "u" nearly disappears, so say <code class="say">dess</code> and <code class="say">mahs</code>. Same for "shi" before a "t" or "k," as in <code class="say">shteh</code>.</li>
+      <li><b>Long vowels</b> (written ō, ū in romaji) are just held about twice as long. <i>Toh</i> vs. <i>tohh</i> can change the word.</li>
+      <li><b>Double consonants</b> mean a tiny pause: <i>kippu</i> is <code class="say">keep-poo</code> with a beat before the "p."</li>
+      <li><b>The Japanese "r"</b> sounds like the quick "tt" in American "butter" or "water." Don't roll it or use a hard English R.</li>
+      <li><b>Tricky spellings:</b> <code class="say">tsoo</code> is the "ts" in "cats"; <code class="say">foo</code> (for ふ) is halfway between "f" and "h"; "g" is always hard, as in "go."</li>
+      <li>Tap <b>Hear it</b> to hear a phrase from your device's Japanese voice, or <b>Show</b> to display it in big text for staff. Don't worry about being perfect, since effort is appreciated.</li>
+    </ul>
+  </details>
+
+  <div id="sections"></div>
+  <div id="empty">No phrases match that search.</div>
+</main>
+
+<footer>
+  Pronunciations are approximations for English speakers. Emergency numbers in Japan: <b>110</b> police, <b>119</b> fire and ambulance.
+</footer>
+
+<dialog id="dlg">
+  <div class="small" id="dlg-en"></div>
+  <div class="big" id="dlg-jp"></div>
+  <div class="small" id="dlg-romaji"></div>
+  <button id="dlg-close" type="button">Close</button>
+</dialog>
+
+<script>
+// Each phrase: [English, Japanese, romaji, "how an American says it", optional note]
+var SECTIONS = [
+  { id: "basics", title: "Basics & Politeness",
+    intro: "Start here. These cover most daily interactions.",
+    items: [
+      ["Hello (daytime)", "こんにちは", "Konnichiwa", "kohn-nee-chee-wah"],
+      ["Good morning", "おはようございます", "Ohayō gozaimasu", "oh-hah-yoh goh-zah-ee-mahs", "Use until about 10 or 11 a.m. Among friends, just \"Ohayō.\""],
+      ["Good evening", "こんばんは", "Konbanwa", "kohn-bahn-wah"],
+      ["Thank you", "ありがとうございます", "Arigatō gozaimasu", "ah-ree-gah-toh goh-zah-ee-mahs", "The polite default. Casual version for friends: \"Arigatō.\""],
+      ["You're welcome", "どういたしまして", "Dō itashimashite", "doh ee-tah-shee-mah-shteh", "Rarely needed. A smile and a nod usually does it."],
+      ["Excuse me / Sorry", "すみません", "Sumimasen", "soo-mee-mah-sen", "The all-purpose phrase: get a server's attention, squeeze past someone, or apologize lightly."],
+      ["I'm sorry (apology)", "ごめんなさい", "Gomen nasai", "goh-mehn nah-sah-ee"],
+      ["Please (when asking for something)", "お願いします", "Onegaishimasu", "oh-neh-gah-ee-shee-mahs", "Add it after what you want: \"Kore, onegaishimasu\" (This one, please)."],
+      ["Yes / No", "はい / いいえ", "Hai / Iie", "hah-ee / ee-eh", "\"Hai\" often just means \"I hear you,\" not necessarily \"I agree.\""],
+      ["Nice to meet you", "はじめまして", "Hajimemashite", "hah-jee-meh-mah-shteh"],
+      ["Goodbye", "さようなら", "Sayōnara", "sah-yoh-nah-rah", "Fairly final. Many people just say \"Shitsurei shimasu\" or \"Mata ne\" (see you) casually."]
+    ]},
+  { id: "understood", title: "Getting Understood",
+    intro: "For when the language barrier hits.",
+    items: [
+      ["Do you speak English?", "英語を話せますか", "Eigo o hanasemasu ka", "ay-goh oh hah-nah-seh-mahs kah"],
+      ["I don't understand", "わかりません", "Wakarimasen", "wah-kah-ree-mah-sen"],
+      ["One more time, please", "もう一度お願いします", "Mō ichido onegaishimasu", "moh ee-chee-doh oh-neh-gah-ee-shee-mahs"],
+      ["Please speak slowly", "ゆっくり話してください", "Yukkuri hanashite kudasai", "yook-koo-ree hah-nah-shteh koo-dah-sah-ee"],
+      ["What is this?", "これは何ですか", "Kore wa nan desu ka", "koh-reh wah nahn dess kah", "Point at the thing. It works everywhere."],
+      ["Could you write it down?", "書いてもらえますか", "Kaite moraemasu ka", "kah-ee-teh moh-rah-eh-mahs kah"],
+      ["I'm from America", "アメリカから来ました", "Amerika kara kimashita", "ah-meh-ree-kah kah-rah kee-mah-shtah"]
+    ]},
+  { id: "food", title: "Restaurants & Food",
+    intro: "Most places have picture menus or plastic food displays, so you can also just point.",
+    items: [
+      ["Table for one", "一人です", "Hitori desu", "hee-toh-ree dess"],
+      ["Table for two", "二人です", "Futari desu", "foo-tah-ree dess", "Three is \"san-nin\" (sahn-neen), four is \"yo-nin\" (yoh-neen)."],
+      ["Menu, please", "メニューをください", "Menyū o kudasai", "meh-nyoo oh koo-dah-sah-ee"],
+      ["Do you have an English menu?", "英語のメニューはありますか", "Eigo no menyū wa arimasu ka", "ay-goh noh meh-nyoo wah ah-ree-mahs kah"],
+      ["I'll have this one", "これをください", "Kore o kudasai", "koh-reh oh koo-dah-sah-ee", "Works for ordering and shopping."],
+      ["What do you recommend?", "おすすめは何ですか", "Osusume wa nan desu ka", "oh-soo-soo-meh wah nahn dess kah"],
+      ["Water, please", "お水をください", "Omizu o kudasai", "oh-mee-zoo oh koo-dah-sah-ee"],
+      ["Let's eat (said before a meal)", "いただきます", "Itadakimasu", "ee-tah-dah-kee-mahs"],
+      ["Delicious!", "おいしい", "Oishii", "oh-ee-shee", "Said with a smile, it makes any cook happy."],
+      ["Thank you for the meal (said when done)", "ごちそうさまでした", "Gochisōsama deshita", "goh-chee-soh-sah-mah desh-tah", "Say it when leaving a restaurant."],
+      ["Check, please", "お会計をお願いします", "Okaikei o onegaishimasu", "oh-kah-ee-keh-ee oh-neh-gah-ee-shee-mahs", "Often you pay at the register by the door instead."],
+      ["Can I pay by card?", "カードは使えますか", "Kādo wa tsukaemasu ka", "kah-doh wah tsoo-kah-eh-mahs kah", "Many small places are cash-only. Carry yen."],
+      ["I'm vegetarian", "私はベジタリアンです", "Watashi wa bejitarian desu", "wah-tah-shee wah beh-jee-tah-ree-ahn dess", "Heads up: dashi (fish broth) is in many dishes, so also ask the next question."],
+      ["Does this have meat or fish?", "肉と魚は入っていますか", "Niku to sakana wa haitte imasu ka", "nee-koo toh sah-kah-nah wah hah-eet-teh ee-mahs kah"],
+      ["I have an allergy", "アレルギーがあります", "Arerugī ga arimasu", "ah-reh-roo-gee gah ah-ree-mahs", "Show your translation app for the specific ingredient."]
+    ]},
+  { id: "transit", title: "Getting Around",
+    intro: "Trains, taxis, and asking for directions.",
+    items: [
+      ["Where is the station?", "駅はどこですか", "Eki wa doko desu ka", "eh-kee wah doh-koh dess kah", "Swap in any place: \"Toire wa doko desu ka\" for the restroom."],
+      ["Where is the restroom?", "トイレはどこですか", "Toire wa doko desu ka", "toh-ee-reh wah doh-koh dess kah"],
+      ["Does this train go to Shinjuku?", "この電車は新宿に行きますか", "Kono densha wa Shinjuku ni ikimasu ka", "koh-noh dehn-shah wah sheen-joo-koo nee ee-kee-mahs kah"],
+      ["Which platform?", "何番線ですか", "Nan-ban-sen desu ka", "nahn-bahn-sehn dess kah"],
+      ["To Tokyo Station, please (taxi)", "東京駅までお願いします", "Tōkyō-eki made onegaishimasu", "toh-kyoh eh-kee mah-deh oh-neh-gah-ee-shee-mahs", "Replace the place name. Showing the address on your phone also works."],
+      ["How much is it?", "いくらですか", "Ikura desu ka", "ee-koo-rah dess kah"],
+      ["Is it far?", "遠いですか", "Tōi desu ka", "toh-ee dess kah"],
+      ["I'm lost", "道に迷いました", "Michi ni mayoimashita", "mee-chee nee mah-yoh-ee-mahsh-tah"]
+    ]},
+  { id: "directions", title: "Handy Words",
+    intro: "Single words you'll hear and see constantly.",
+    items: [
+      ["Left", "左", "Hidari", "hee-dah-ree"],
+      ["Right", "右", "Migi", "mee-gee"],
+      ["Straight ahead", "まっすぐ", "Massugu", "mahs-soo-goo"],
+      ["Station", "駅", "Eki", "eh-kee"],
+      ["Airport", "空港", "Kūkō", "koo-koh"],
+      ["Hotel", "ホテル", "Hoteru", "hoh-teh-roo"],
+      ["Convenience store", "コンビニ", "Konbini", "kohn-bee-nee", "Open 24 hours, with ATMs that accept foreign cards (7-Eleven is the classic)."],
+      ["Hospital", "病院", "Byōin", "byoh-een"],
+      ["Exit / Entrance", "出口 / 入口", "Deguchi / Iriguchi", "deh-goo-chee / ee-ree-goo-chee"]
+    ]},
+  { id: "shopping", title: "Shopping",
+    intro: "Prices are fixed in nearly all shops, so skip haggling.",
+    items: [
+      ["Just looking", "見ているだけです", "Mite iru dake desu", "mee-teh ee-roo dah-keh dess"],
+      ["Can I try this on?", "試着してもいいですか", "Shichaku shite mo ii desu ka", "shee-chah-koo shteh moh ee dess kah"],
+      ["Do you have a larger size?", "大きいサイズはありますか", "Ōkii saizu wa arimasu ka", "oh-kee sah-ee-zoo wah ah-ree-mahs kah"],
+      ["Tax-free, please", "免税でお願いします", "Menzei de onegaishimasu", "mehn-zeh-ee deh oh-neh-gah-ee-shee-mahs", "Bring your passport."],
+      ["No bag, thank you", "袋はいりません", "Fukuro wa irimasen", "foo-koo-roh wah ee-ree-mah-sen"],
+      ["Do you accept credit cards?", "クレジットカードは使えますか", "Kurejitto kādo wa tsukaemasu ka", "koo-reh-jeet-toh kah-doh wah tsoo-kah-eh-mahs kah"]
+    ]},
+  { id: "hotel", title: "Hotel",
+    intro: "",
+    items: [
+      ["I have a reservation", "予約しています", "Yoyaku shite imasu", "yoh-yah-koo shteh ee-mahs"],
+      ["Check-in, please", "チェックインをお願いします", "Chekku-in o onegaishimasu", "chek-koo-een oh-neh-gah-ee-shee-mahs"],
+      ["Could you hold my luggage?", "荷物を預かってもらえますか", "Nimotsu o azukatte moraemasu ka", "nee-moh-tsoo oh ah-zoo-kaht-teh moh-rah-eh-mahs kah", "Very common to do before check-in or after check-out."],
+      ["What's the Wi-Fi password?", "Wi-Fiのパスワードは何ですか", "Wai-fai no pasuwādo wa nan desu ka", "wah-ee-fah-ee noh pah-soo-wah-doh wah nahn dess kah"]
+    ]},
+  { id: "help", title: "Help & Emergencies",
+    intro: "",
+    emergency: "Dial <b>110</b> for police and <b>119</b> for fire or an ambulance.",
+    items: [
+      ["Help!", "助けて！", "Tasukete!", "tah-soo-keh-teh"],
+      ["Please call the police", "警察を呼んでください", "Keisatsu o yonde kudasai", "keh-eh-sah-tsoo oh yohn-deh koo-dah-sah-ee"],
+      ["Please call an ambulance", "救急車を呼んでください", "Kyūkyūsha o yonde kudasai", "kyoo-kyoo-shah oh yohn-deh koo-dah-sah-ee"],
+      ["I feel sick", "具合が悪いです", "Guai ga warui desu", "goo-ah-ee gah wah-roo-ee dess"],
+      ["Where is the hospital?", "病院はどこですか", "Byōin wa doko desu ka", "byoh-een wah doh-koh dess kah"],
+      ["I lost my wallet", "財布をなくしました", "Saifu o nakushimashita", "sah-ee-foo oh nah-koo-shee-mahsh-tah"],
+      ["I lost my passport", "パスポートをなくしました", "Pasupōto o nakushimashita", "pah-soo-poh-toh oh nah-koo-shee-mahsh-tah"]
+    ]},
+  { id: "numbers", title: "Numbers & Money",
+    intro: "Prices are in yen (円, \"en\" = ehn). The big jump to remember: 10,000 is \"man,\" a single word, so \"ichi-man-en\" is ¥10,000. Check a currency app for the current dollar rate.",
+    items: [
+      ["1", "一", "Ichi", "ee-chee"],
+      ["2", "二", "Ni", "nee"],
+      ["3", "三", "San", "sahn"],
+      ["4", "四", "Yon", "yohn", "Also \"shi,\" but \"yon\" is more common in daily use."],
+      ["5", "五", "Go", "goh"],
+      ["6", "六", "Roku", "roh-koo"],
+      ["7", "七", "Nana", "nah-nah", "Also \"shichi.\""],
+      ["8", "八", "Hachi", "hah-chee"],
+      ["9", "九", "Kyū", "kyoo", "Also \"ku.\""],
+      ["10", "十", "Jū", "joo"],
+      ["100", "百", "Hyaku", "hyah-koo"],
+      ["1,000", "千", "Sen", "sehn"],
+      ["10,000", "万", "Man", "mahn"]
+    ]}
+];
+
+var TIPS = [
+  "<b>No tipping.</b> It isn't expected and can confuse staff. A sincere \"arigatō\" is the thank-you.",
+  "<b>Shoes off</b> at homes, many ryokan, and some restaurants when you step up from the entryway (the <i>genkan</i>). Slippers or socks only past that line.",
+  "<b>Keep it quiet on trains.</b> Set your phone to silent and avoid phone calls.",
+  "<b>Use the little tray</b> at the register for cash and cards instead of handing money over. Pass items to people with both hands when it feels right.",
+  "<b>Slurping noodles is fine.</b> Eating while walking is frowned on in many places, so stand near the stall or shop.",
+  "<b>Carry your trash.</b> Public bins are rare, so keep a small bag and dispose of things at a convenience store or station."
+];
+
+function el(tag, cls, text) {
+  var e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+
+var sectionsEl = document.getElementById("sections");
+var navEl = document.getElementById("nav");
+var dlg = document.getElementById("dlg");
+var canSpeak = "speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
+
+function speak(text) {
+  if (!canSpeak) return;
+  window.speechSynthesis.cancel();
+  var u = new SpeechSynthesisUtterance(text);
+  u.lang = "ja-JP";
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+
+function showBig(item) {
+  document.getElementById("dlg-en").textContent = item[0];
+  document.getElementById("dlg-jp").textContent = item[1];
+  document.getElementById("dlg-romaji").textContent = item[2];
+  if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+}
+
+function card(item) {
+  var c = el("div", "card");
+  c.dataset.search = (item[0] + " " + item[1] + " " + item[2]).toLowerCase();
+  c.appendChild(el("div", "en", item[0]));
+  c.appendChild(el("div", "jp", item[1]));
+  c.appendChild(el("div", "romaji", item[2]));
+  var s = el("div", "sound");
+  s.appendChild(document.createTextNode("Say it: "));
+  s.appendChild(el("b", null, item[3]));
+  c.appendChild(s);
+  if (item[4]) c.appendChild(el("div", "note", item[4]));
+  var actions = el("div", "actions");
+  if (canSpeak) {
+    var b1 = el("button", null, "Hear it");
+    b1.type = "button";
+    b1.addEventListener("click", function () { speak(item[1].split(" / ")[0]); });
+    actions.appendChild(b1);
+  }
+  var b2 = el("button", null, "Show");
+  b2.type = "button";
+  b2.addEventListener("click", function () { showBig(item); });
+  actions.appendChild(b2);
+  c.appendChild(actions);
+  return c;
+}
+
+SECTIONS.forEach(function (sec) {
+  var s = el("section");
+  s.id = sec.id;
+  s.appendChild(el("h2", null, sec.title));
+  if (sec.intro) s.appendChild(el("p", "intro", sec.intro));
+  if (sec.emergency) {
+    var em = el("div", "emergency");
+    em.innerHTML = sec.emergency;
+    s.appendChild(em);
+  }
+  var g = el("div", "grid");
+  sec.items.forEach(function (it) { g.appendChild(card(it)); });
+  s.appendChild(g);
+  sectionsEl.appendChild(s);
+
+  var a = el("a", null, sec.title.split(" & ")[0]);
+  a.href = "#" + sec.id;
+  navEl.appendChild(a);
+});
+
+// Etiquette tips
+var tipSec = el("section");
+tipSec.id = "tips";
+tipSec.appendChild(el("h2", null, "Etiquette Basics"));
+var ul = el("ul", "tips");
+TIPS.forEach(function (t) { var li = el("li"); li.innerHTML = t; ul.appendChild(li); });
+tipSec.appendChild(ul);
+sectionsEl.appendChild(tipSec);
+var tipLink = el("a", null, "Etiquette");
+tipLink.href = "#tips";
+navEl.appendChild(tipLink);
+
+// Search
+var searchEl = document.getElementById("search");
+var emptyEl = document.getElementById("empty");
+searchEl.addEventListener("input", function () {
+  var q = searchEl.value.trim().toLowerCase();
+  var anyVisible = false;
+  sectionsEl.querySelectorAll("section").forEach(function (sec) {
+    var cards = sec.querySelectorAll(".card");
+    if (!cards.length) { sec.style.display = q ? "none" : ""; return; }
+    var visible = 0;
+    cards.forEach(function (c) {
+      var hit = !q || c.dataset.search.indexOf(q) !== -1;
+      c.style.display = hit ? "" : "none";
+      if (hit) visible++;
+    });
+    sec.style.display = visible ? "" : "none";
+    if (visible) anyVisible = true;
+  });
+  emptyEl.style.display = (q && !anyVisible) ? "block" : "none";
+});
+
+// Dialog close
+document.getElementById("dlg-close").addEventListener("click", function () {
+  if (dlg.close) dlg.close(); else dlg.removeAttribute("open");
+});
+dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+</script>
+</body>
+</html>
